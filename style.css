@@ -1,0 +1,72 @@
+:root {
+    --ink: #13293d;
+    --paper: #f1f5f9;
+    --user: #13293d;
+    --bot: #ffffff;
+    --accent: #1b998b;
+}
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Trebuchet MS","Segoe UI",system-ui,sans-serif;
+    height: 100dvh;
+}
+.app-shell {
+    max-width: 760px;
+    height: 100dvh;
+}
+.chat {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: .5rem 0;
+}
+.bubble {
+    max-width: 85%;
+    padding: .65rem .9rem;
+    border-radius: 1rem;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+.bubble.bot {
+    background: var(--bot);
+    border: 1px solid #dbe3ec;
+    align-self: flex-start;
+    border-bottom-left-radius: .25rem;
+}
+.bubble.user {
+    background: var(--user);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: .25rem;
+}
+.bubble.error {
+    border-color: #c0392b;
+    color: #c0392b;
+}
+.typing {
+    color: #6b7c8d;
+    font-style: italic;
+}
+.chip {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+}
+.chip:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+.btn-primary:hover, .btn-primary:disabled {
+    background: #157a6e;
+    border-color: #157a6e;
+}
+.form-control:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 .2rem rgba(27,153,139,.25);
+}
